@@ -18,10 +18,6 @@ const Scroller: React.FC<Props> = ({ direction }) => {
   useEffect(() => {
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       scrollerRef.current?.setAttribute("data-animated", "true");
-      if (direction === "reverse") {
-        console.log("Dis");
-        scrollerRef.current?.setAttribute("data-direction", "reverse");
-      }
     }
   }, [scrollerRef]);
 
