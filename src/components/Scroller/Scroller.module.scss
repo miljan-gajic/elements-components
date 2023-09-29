@@ -5,11 +5,48 @@
   max-width: $scroller-width-max;
 }
 
+.scrollerInner {
+  padding-block: $sp-base;
+  display: flex;
+  gap: $sp-base;
+  flex-wrap: wrap;
+}
+
+.tagList {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+
+  & li {
+    background-color: #555;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.5rem;
+    min-width: fit-content;
+    box-shadow: $scroller-element-box-shadow;
+  }
+}
+
 .scroller[data-animated="true"] {
+  --anim-direction: forwards;
+
   overflow: hidden;
+  -webkit-mask: linear-gradient($mask-linear-gradient);
+  mask: linear-gradient($mask-linear-gradient);
 
   .scrollerInner {
+    width: max-content;
     flex-wrap: nowrap;
-    border: 1px solid red;
+    animation: scroll $duration-animation var(--anim-direction) linear infinite;
+  }
+
+  .animReverse {
+    --anim-direction: reverse;
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - ($sp-base / 2)));
   }
 }

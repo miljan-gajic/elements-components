@@ -1,3 +1,13 @@
 // COLORS
 // CONTENT WIDTH
 $scroller-width-max: 600px;
+
+// SPACING
+$sp-base: 1rem;
+
+// TIMING
+$duration-animation: 30s;
+
+// EFFECTS
+$scroller-element-box-shadow: 0 0.5rem 1rem -0.25rem #000;
+$mask-linear-gradient: 90deg, transparent, white 20%, white 80%, transparent;
