@@ -1,0 +1,23 @@
+@import "@/styles/_variables";
+
+.scrollerInner {
+  padding-block: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tagList {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+
+  & li {
+    background-color: #555;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.5rem;
+    min-width: fit-content;
+    box-shadow: 0 0.5rem 1rem -0.25rem #000;
+  }
+}

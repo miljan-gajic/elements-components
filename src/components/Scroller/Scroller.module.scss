@@ -1,0 +1,15 @@
+@import "@/styles/_variables";
+
+.scroller {
+  margin-top: 5rem;
+  max-width: $scroller-width-max;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+
+  .scrollerInner {
+    flex-wrap: nowrap;
+    border: 1px solid red;
+  }
+}
